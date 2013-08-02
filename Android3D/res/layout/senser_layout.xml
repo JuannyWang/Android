@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+    >
+	<TextView 
+	    android:id="@+id/tvX"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content" 
+	    android:textSize="20sp"
+	/>
+	<TextView 
+	    android:id="@+id/tvY"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content" 
+	    android:textSize="20sp"
+	/>
+	<TextView 
+	    android:id="@+id/tvZ"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content" 
+	    android:textSize="20sp"
+	/>
+	<TextView 
+	    android:id="@+id/tvPitch"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content" 
+	    android:textSize="20sp"
+	/>
+	<TextView 
+	    android:id="@+id/tvYaw"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content" 
+	    android:textSize="20sp"
+	/>
+	<TextView 
+	    android:id="@+id/tvRoll"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content" 
+	    android:textSize="20sp"
+	/>
+</LinearLayout>

@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backcolor" 
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="title"
+            android:gravity="center_horizontal"
+        	android:textSize="20sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+			<RelativeLayout 
+			    android:id="@+id/relayout1"
+			    android:layout_width="60dp"
+			    android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/fenxiang"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="选中" />
+                
+            </RelativeLayout>
+
+            <ghost.patrol.table.ObservableHorizontalScrollView
+                android:layout_toRightOf="@+id/relayout1"
+                android:id="@+id/horizontal_scrollview1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/linear_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                </LinearLayout>
+                
+            </ghost.patrol.table.ObservableHorizontalScrollView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ghost.patrol.table.ObservableScrollView
+                android:id="@+id/scrollview1"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <ghost.patrol.table.NoScrollListView
+                        android:id="@+id/listview1"
+                        android:layout_width="100dp"
+                        android:layout_height="200dp" >
+                    </ghost.patrol.table.NoScrollListView>
+                </LinearLayout>
+            </ghost.patrol.table.ObservableScrollView>
+
+            <ghost.patrol.table.ObservableScrollView
+                android:id="@+id/scrollview2"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content" >
+
+                <ghost.patrol.table.ObservableHorizontalScrollView
+                    android:id="@+id/horizontal_scrollview2"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content" >
+
+                    <ghost.patrol.table.NoScrollListView
+                        android:id="@+id/listview"
+                        android:layout_width="250dp"
+                        android:layout_height="200dp" >
+                    </ghost.patrol.table.NoScrollListView>
+                </ghost.patrol.table.ObservableHorizontalScrollView>
+            </ghost.patrol.table.ObservableScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

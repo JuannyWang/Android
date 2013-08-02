@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backcolor"  >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="查看机主信息"
+        android:gravity="center_horizontal"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/text_uid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="20dp"
+        android:text="巡线员:"
+        android:gravity="left"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/text_uname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/text_uid"
+        android:layout_marginTop="20dp"
+        android:text="巡线员姓名:"
+        android:gravity="left"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/text_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/text_uname"
+        android:layout_marginTop="20dp"
+        android:text="年龄:"
+        android:gravity="left"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/text_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/text_age"
+        android:layout_marginTop="20dp"
+        android:text="性别:"
+        android:gravity="left"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/text_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/text_sex"
+        android:layout_marginTop="20dp"
+        android:text="巡线员电话:"
+        android:gravity="left"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/text_part"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/text_phone"
+        android:layout_marginTop="20dp"
+        android:text="巡线员部门:"
+        android:gravity="left"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/text_part"
+        android:layout_marginTop="26dp"
+        android:text="下一页"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btn_next"
+        android:text="返回"
+        android:textSize="25sp" />
+
+</RelativeLayout>

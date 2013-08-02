@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/oppositeImage_fullscreen"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/vediodefault" />
+
+    <ImageView
+        android:id="@+id/ownImage_fullscreen"
+        android:layout_width="150dip"
+        android:layout_height="150dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/vediodefault" />
+
+    <TableLayout
+        android:id="@+id/bottomLayout_fullscreen"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:layout_alignParentLeft="true"
+        android:background="@color/fullscreenbottombg" >
+        
+        <TableRow 
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/fullScreenButotn_fullscreen"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:layout_marginRight="20dip"
+            android:layout_marginLeft="20dip"
+            android:src="@drawable/returnfromfullscreen" />
+
+        <ImageButton
+            android:id="@+id/vedioSwithButton_fullscreen"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:layout_marginRight="20dip"
+            android:src="@drawable/vedioswith_32" />
+
+        <ImageButton
+            android:id="@+id/hideselfButton_fullscreen"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:layout_marginRight="20dip"
+            android:src="@drawable/hideself_32" />
+
+        <ImageButton
+            android:id="@+id/micButton_fullscreen"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:layout_marginRight="20dip"
+            android:src="@drawable/mic_32" />             
+        
+        <ImageButton
+            android:id="@+id/volumeButton_fullscreen"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/volume" />
+        
+        <SeekBar
+            android:id="@+id/vedioVolumeBar_fullscreen"
+            android:layout_width="150dip"
+            android:layout_height="30dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="20dip"
+            android:max="100"
+            android:progress="50" />
+        
+        <ImageButton
+            android:id="@+id/overButton_fullscreen"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:layout_marginRight="20dip"
+            android:src="@drawable/endcall_32" />
+        
+        <TextView 
+            android:id="@+id/times_fullscreen"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:layout_marginRight="20dip"
+            android:text="00:54"/>
+       </TableRow>
+    </TableLayout>
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NewTempTest</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="blanktip">用户名或密码为空</string>
+    <string name="loginfail">登录失败</string>
+    <string name="serverip">127.0.0.1</string>
+    <string name="port">8215</string>
+
+</resources>

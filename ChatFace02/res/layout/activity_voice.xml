@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainbg"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="50dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="20dip"
+        android:layout_weight="2"
+        android:background="@drawable/voice_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/CommunicationState_voice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="正在拨号"
+                android:textColor="@android:color/white" />
+            
+            <ImageView
+                android:id="@+id/contatcorHead_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/bigheadbg"               
+                android:src="@drawable/bigcontactorhead" />
+
+            <TextView
+                android:id="@+id/contatcorName_voice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="小张"
+                android:textColor="@android:color/white" />
+            
+            <RelativeLayout
+                android:id="@+id/control_TimeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:gravity="center_vertical" 
+                android:visibility="visible">                      <!-- android:visibility="invisible" -->
+
+                <TextView
+                    android:id="@+id/controlTextView_voice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:drawableLeft="@drawable/start"
+                    android:gravity="center"
+                    android:text="等待"
+                    android:layout_centerVertical="true"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/talkTime_voice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="00:34"
+                    android:textColor="@android:color/white"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TableLayout
+            android:id="@+id/voiceTalkTableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="3"
+            android:stretchColumns="*" >
+            
+            <TableRow
+                android:id="@+id/receiveCallLayout_voice"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">                          <!-- android:visibility="gone" -->
+                
+                <ImageButton
+                    android:id="@+id/receiveCallButton_voice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"                  
+                    android:src="@drawable/receivecallimg" 
+                    android:background="@drawable/talklayout_bg" />
+
+            </TableRow>
+            <TableRow
+                android:id="@+id/talkMenuLayout_voice"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/talklayout_bg" >      <!-- android:visibility="visible" -->
+
+                <ImageButton
+                    android:id="@+id/addCallButton_voice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:src="@drawable/addcall" />
+
+                <ImageButton
+                    android:id="@+id/talkVoiceButton_voice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:src="@drawable/volumeimg" />
+
+                <ImageButton
+                    android:id="@+id/talkNovoiceButton_voice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:src="@drawable/novoice" />
+
+                <ImageButton
+                    android:id="@+id/talkKeyButton_voice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:src="@drawable/dailkeybord" />
+            </TableRow>
+        </TableLayout>
+
+        <ImageButton
+            android:id="@+id/hangupImageButton_voice"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="2"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/hangupbutton_bg"  
+            android:src="@drawable/hangupimg" />                     <!-- android:src="@drawable/refusereceiveimg"  -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"       
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/historyButton_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/roundbutton"
+            android:text="通话记录"
+            android:textSize="25sp"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/contactorsButton_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/roundbutton"
+            android:text=" 通 信 录 "
+            android:textSize="25sp"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/msgButton_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/roundbutton"
+            android:text=" 留    言  "
+            android:textSize="25sp"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/otherfunButton_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/roundbutton"
+            android:text="附加功能"
+            android:textSize="25sp"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</LinearLayout>

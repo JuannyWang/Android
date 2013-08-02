@@ -1,0 +1,26 @@
+<resources>
+
+    <string-array name="random_imgs">
+        <item>@drawable/red_bg</item>
+    </string-array>
+    <string-array name="random_metro_colors">
+        <item>@color/metro_blue</item>
+        <item>@color/metro_brown</item>
+        <item>@color/metro_grass_green</item>
+        <item>@color/metro_green</item>
+        <item>@color/metro_magenta</item>
+        <item>@color/metro_orange</item>
+        <item>@color/metro_pink</item>
+        <item>@color/metro_purple</item>
+        <item>@color/metro_red</item>
+        <item>@color/metro_sky_blue</item>
+    </string-array>
+    
+    <string-array name="select_grade">
+        <item>@string/free_learning</item>
+        <item>@string/basic_learning</item>
+        <item>@string/middle_learning</item>
+        <item>@string/difficult_learning</item>
+    </string-array>
+
+</resources>

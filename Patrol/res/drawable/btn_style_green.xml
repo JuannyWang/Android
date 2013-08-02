@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+	android:state_enabled ： 是否可用
+	android:state_focused : 是否获取焦点
+	android:state_pressed ： 是否按下
+	
+ -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/btn_style_disabled" android:state_enabled="false"/>
+    <item android:drawable="@drawable/btn_style_green_pressed" android:state_focused="true" android:state_pressed="true"/>
+    <item android:drawable="@drawable/btn_style_green_pressed" android:state_focused="false" android:state_pressed="true"/>
+    <item android:drawable="@drawable/btn_style_green_focused" android:state_focused="true"/>
+    <item android:drawable="@drawable/btn_style_green_normal" android:state_focused="false"/>
+
+</selector>

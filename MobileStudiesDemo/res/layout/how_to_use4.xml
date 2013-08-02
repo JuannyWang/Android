@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" 
+    android:background="@drawable/use4" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+  >
+
+    <Button
+        android:id="@+id/start_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17dp"
+        android:onClick="startbutton"
+        android:background="@drawable/btn_style_white"
+        android:text="开始新的学习体验" />
+    
+</RelativeLayout>

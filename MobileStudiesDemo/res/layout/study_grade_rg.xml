@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical" >
+
+    <RadioGroup
+        android:id="@+id/grade_rg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <RadioButton
+            android:id="@+id/free_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:checked="true"
+            android:onClick="selectOnclick"
+            android:text="@string/free_learning"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/basic_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:onClick="selectOnclick"
+            android:text="@string/basic_learning"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/middle_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:onClick="selectOnclick"
+            android:text="@string/middle_learning"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/difficult_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:onClick="selectOnclick"
+            android:text="@string/difficult_learning"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+</RelativeLayout>

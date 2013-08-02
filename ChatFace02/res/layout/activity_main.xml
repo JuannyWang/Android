@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainbg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"        
+        android:layout_weight="8"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:paddingLeft="50dip"
+            android:paddingRight="50dip" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="100"
+                    android:gravity="bottom"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/numberText_main"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:text="12345678"
+                        android:gravity="bottom"
+                        android:layout_gravity="bottom"
+                        android:textColor="@android:color/white"
+                        android:textSize="30sp" />
+
+                    <ImageButton
+                        android:id="@+id/clearButton_main"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dip"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:src="@drawable/clearimg" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:background="@color/numbercolor" />
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="15dip"
+                android:layout_marginTop="10dip"
+                android:layout_weight="5"
+                android:paddingTop="15dip"
+                android:paddingBottom="15dip"
+                android:paddingLeft="25dip"
+                android:paddingRight="25dip"
+                android:background="@drawable/keybord_bg"
+                android:stretchColumns="*" >
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1" >
+
+                    <Button
+                        android:id="@+id/oneButton_main"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="0dip"
+                        android:layout_marginRight="2dip"
+                        android:background="@drawable/number_bg1"
+                        android:text="1"
+                        android:textSize="28sp"
+                        android:textColor="@color/numbercolor" />
+
+                    <Button
+                        android:id="@+id/twoButton_main"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="0dip"
+                        android:layout_marginRight="2dip"
+                        android:background="@drawable/number_bg1"
+                        android:text="2"
+                        android:textSize="28sp"
+                        android:textColor="@color/numbercolor" />
+
+                    <Button
+                        android:id="@+id/threeButton_main"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="0dip"
+                        android:background="@drawable/number_bg1"
+                        android:text="3"
+                        android:textSize="28sp"
+                        android:textColor="@color/numbercolor" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="2dip"
+                    android:layout_weight="1" >
+
+                    <Button
+                        android:id="@+id/fourButton_main"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="0dip"
+                        android:layout_marginRight="2dip"
+                        android:background="@drawable/number_bg2"
+                        android:text="4"
+                        android:textSize="28sp"
+                        android:textColor="@color/numbercolor" />
+
+                    <Button
+                        android:id="@+id/fiveButton_main"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="0dip"
+                        android:layout_marginRight="2dip"
+                        android:background="@drawable/number_bg2"
+                        android:text="5"
+                        android:textSize="28sp"
+                        android:textColor="@color/numbercolor" />
+
+                    <Button
+                        android:id="@+id/sixButton_main"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="0dip"
+                        android:background="@drawable/number_bg2"
+                        android:text="6"
+                        android:textSize="28sp"
+                        android:textColor="@color/numbercolor" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="2dip"
+                    android:layout_weight="1" >
+
+                    <Button
+                        android:id="@+id/sevenButton_main"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="0dip"
+                        android:layout_marginRight="2dip"
+                        android:background="@drawable/number_bg1"
+                        android:text="7"
+                        android:textSize="28sp"
+                        android:textColor="@color/numbercolor" />
+
+                    <Button
+                        android:id="@+id/eightButton_main"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="0dip"
+                        android:layout_marginRight="2dip"
+                        android:background="@drawable/number_bg1"
+                        android:text="8"
+                        android:textSize="28sp"
+                        android:textColor="@color/numbercolor" />
+
+                    <Button
+                        android:id="@+id/nineButton_main"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="0dip"
+                        android:background="@drawable/number_bg1"
+                        android:text="9"
+                        android:textSize="28sp"
+                        android:textColor="@color/numbercolor" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="2dip"
+                    android:layout_weight="1" >
+
+                    <Button
+                        android:id="@+id/sevenButton_main"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="0dip"
+                        android:layout_marginRight="2dip"
+                        android:background="@drawable/number_bg2"
+                        android:text="*"
+                        android:textSize="28sp"
+                        android:textColor="@color/numbercolor" />
+
+                    <Button
+                        android:id="@+id/eightButton_main"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="0dip"
+                        android:layout_marginRight="2dip"
+                        android:background="@drawable/number_bg2"
+                        android:text="0"
+                        android:textSize="28sp"
+                        android:textColor="@color/numbercolor" />
+
+                    <Button
+                        android:id="@+id/nineButton_main"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="0dip"
+                        android:background="@drawable/number_bg2"
+                        android:text="#"
+                        android:textSize="28sp"
+                        android:textColor="@color/numbercolor" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"           
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/historyButton_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/roundbutton"
+                android:text="通话记录"
+                android:textSize="25sp"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/contactorsButton_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/roundbutton"
+                android:text=" 通 信 录 "
+                android:textSize="25sp"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/msgButton_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/roundbutton"
+                android:text=" 留    言  "
+                android:textSize="25sp"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/otherfunButton_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/roundbutton"
+                android:text="附加功能"
+                android:textSize="25sp"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mainBottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_margin="5dip"
+        android:layout_weight="1"
+        android:background="#ff0000"
+        android:orientation="horizontal" >
+
+        <TableLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="25dip"
+            android:layout_marginRight="25dip"
+            android:layout_weight="2"
+            android:stretchColumns="*" >
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <Button
+                    android:id="@+id/softDailButton_main"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/roundbutton"
+                    android:text="软件拨号"
+                    android:layout_weight="1"
+                    android:textSize="23sp"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/ptDailButton_main"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/roundbutton"
+                    android:text="普通拨号"
+                    android:layout_weight="1"
+                    android:textSize="23sp"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/vedioDailButton_main"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/roundbutton"
+                    android:text="视频拨号"
+                    android:layout_weight="1"
+                    android:textSize="23sp"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/smsDailButton_main"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/roundbutton"
+                    android:text="短    信 "
+                    android:layout_weight="1"
+                    android:textSize="23sp"
+                    android:textColor="@android:color/white" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/talkbg" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

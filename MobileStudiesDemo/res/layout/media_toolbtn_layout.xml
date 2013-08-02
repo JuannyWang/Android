@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#00000000">
+
+   <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/txtview_currenttime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:gravity="left"/>
+
+         <SeekBar
+            android:id="@+id/proseekbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:progressDrawable="@drawable/bacon_seekbar"     
+       	 	android:thumb="@drawable/thumb"/>
+
+        <TextView
+            android:id="@+id/txtview_totaltime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:text="00:00" 
+            android:gravity="left"/> 
+    </LinearLayout> 
+</LinearLayout>

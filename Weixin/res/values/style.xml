@@ -1,0 +1,25 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    
+    <style name="ActivityStyle" parent="android:Theme.NoTitleBar">
+        <item name="android:windowAnimationStyle">@style/AnimFade</item>
+    </style>
+    
+    <!-- 
+    	动画消失
+    	activityOpenEnterAnimation：表示新的activity创建进入效果
+    	activityOpenExitAnimation：activity还没有finish()下退出效果
+    	activityCloseEnterAnimation：表示上一个activity返回进入效果
+    	activityCloseExitAnimation：activity finish()之后退出效果
+     -->
+    <style name="AnimFade" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/fade_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/hold</item>
+        <item name="android:activityCloseEnterAnimation">@anim/fade_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/fade_out</item>
+    </style>
+    
+    
+    
+    
+</resources>

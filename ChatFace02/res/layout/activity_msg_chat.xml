@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:background="#912479" >
+
+        <Button
+            android:id="@+id/receive_msg_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:onClick="ReplyMsgOnclick"
+            android:text="Back" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="14.18"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/receive_msg_show"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint=""
+            android:singleLine="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="7dp"
+        android:layout_weight="0.5"
+        android:orientation="horizontal" >
+
+        <EditText
+			android:id="@+id/reply_msg_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="9.50"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/reply_msg_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.5"
+            android:onClick="ReplyMsgOnclick"
+            android:text="发送"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</LinearLayout>

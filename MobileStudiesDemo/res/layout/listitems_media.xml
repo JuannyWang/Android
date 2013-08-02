@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="2dp"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:orientation="horizontal" >
+	<LinearLayout
+	    android:id="@+id/layout_mediaitem"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:gravity="center_vertical">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/txtview_id"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:textColor="#E8F2FE"
+            />
+            <!--  android:textSize="20sp" -->
+        
+<!--         <ImageView android:id="@+id/imgview_playinglogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/playinglogo"
+            android:visibility="invisible"/> -->
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtview_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+  <!--   <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/probar_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+             android:layout_centerInParent="true" />
+
+        <ImageButton
+            android:id="@+id/imgbtn_download"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:focusable="false"
+            android:src="@drawable/download"
+            android:visibility="invisible" 
+            
+            android:layout_centerInParent="true"/> 
+    </RelativeLayout>-->
+</LinearLayout>
+</LinearLayout>

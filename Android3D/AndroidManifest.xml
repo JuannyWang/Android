@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ghost.android3d"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="9" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="ghost.android3d.StartActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".audio.MyAudioActivity" />
+        <activity android:name=".media.MyMediaActivity" />
+        <activity android:name=".sqlite.MySQLiteActivity" />
+        <activity android:name=".opengl01.MyFirstTriangleActivity" />
+        <activity android:name=".opengl02.PointAndLineActivity" />
+        <activity android:name=".opengl03.ChangeTriangleActivity" />
+        <activity android:name=".opengl04.PerspectiveActivity" />
+        <activity android:name=".opengl05.SingleLightActivity" />
+        <activity android:name=".opengl06.FiveLightActivity" />
+        <activity android:name=".opengl07.ThreeBollActivity" />
+        <activity android:name=".opengl08.MoveLightActivity" />
+        <activity android:name=".opengl09.VertexActivity" />
+        <activity android:name=".opengl10.IndexActivity" />
+        <activity android:name=".opengl11.TextureTriangleActivity" />
+        <activity android:name=".opengl12.TextureBallActivity" />
+        <activity android:name=".opengl13.EarthAndMoonActivity" />
+        <activity android:name=".opengl14.DifferentTextureActivity" />
+        <activity android:name=".opengl15.ColorCubeActivity" />
+        <activity android:name=".opengl16.CylinderActivity" />
+        <activity android:name=".opengl17.LineCylinderActivity" />
+        <activity android:name=".opengl18.TaperActivity" />
+        <activity android:name=".opengl19.LineTaperActivity" />
+        <activity android:name=".opengl20.CirqueActivity" />
+        <activity android:name=".opengl21.LineCirqueActivity" />
+        <activity android:name=".opengl22.ParaboloidActivity" />
+        <activity android:name=".opengl23.LineParaboloidActivity" />
+        <activity android:name=".opengl24.DrumActivity" />
+        <activity android:name=".opengl25.LineDrumActivity" />
+        <activity android:name=".opengl26.HelicoidActivity" />
+        <activity android:name=".opengl27.LineHelicoidActivity" />
+        <activity android:name=".opengl28.ScaleActivity" />
+        <activity android:name=".opengl29.TranslateActivity" />
+        <activity android:name=".opengl30.RotateActivity" />
+        <activity android:name=".opengl31.NewEarthActivity" />
+        <activity android:name=".opengl32.RotateRectActivity" />
+        <activity android:name=".opengl33.PyramidActivity" />
+        <activity android:name=".opengl34.GlassActivity" />
+        <activity android:name=".opengl35.BlendEarthActivity" />
+        <activity android:name=".opengl36.FilterActivity" />
+        <activity android:name=".opengl37.CactusActivity" />
+        <activity android:name=".opengl38.FlagActivity" />
+        <activity android:name=".opengl39.LandActivity" />
+        <activity android:name=".opengl40.BasketballActivity" />
+        <activity android:name=".senser.SenserActivity" />
+        <activity android:name=".opengl41.FallBallActivity" />
+        <activity android:name=".opengl42.CollisionActivity" />
+        <activity android:name=".opengl43.FireWorkActivity" />
+        <activity android:name=".opengl44.TextureFireActivity" />
+    </application>
+
+</manifest>

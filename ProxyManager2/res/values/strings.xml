@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, LoginActivity!</string>
+    <string name="app_name">经销商库存管理</string>
+    <string name="username">用户名：</string>
+    <string name="password">密码：</string>
+    <string name="remenbername">记住用户名</string>
+    <string name="login">登录</string>
+    <string name="port">15678</string>
+    <string name="serverip">14.110.161.114:8888</string>
+    <string name="blanktip">用户名和密码不能为空</string>
+    <string name="loginfail">用户名或密码错误，登录失败。</string>
+    <string name="uploadsuccess">上传成功</string>
+    <string name="uploadfail">上传失败</string>
+    <string name="insertcode">串号：</string>
+    <string name="modem">modem</string>
+    <string name="cellphone">手机</string>
+    <string name="removecode">串号：</string>
+    <string name="oldcode">原串号：</string>
+    <string name="newcode">新串号：</string>
+    <string name="scan">扫描</string>
+    <string name="upload">完成</string>
+    <string name="clientid">客户号码：</string>
+    <string name="nullid">客户号码不能为空</string>
+    <string name="nullcode">号码不能为空</string>
+    <string name="nulltype">请选择类别</string>
+    <string name="quit">退出</string>
+    <string name="timeout">连接超时</string>
+
+</resources>

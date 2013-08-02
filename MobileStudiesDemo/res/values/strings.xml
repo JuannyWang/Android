@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">文峰网络学习课堂</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <!-- Tab name -->
+    <string name="assignments">作业安排</string>
+    <string name="topics">话题讨论</string>
+
+    <!-- Button -->
+    <string name="main_setting">系统设置</string>
+    <string name="reset_btn">重置</string>
+    <string name="vedio_btn">视频学习</string>
+    <string name="audio_btn">音频学习</string>
+    <string name="examPool_btn">题库练习</string>
+    <string name="login_button">登录</string>
+    <string name="login_regester_btn">登录/注册</string>
+    <string name="login_regester">注册</string>
+    <string name="send_btn">发送</string>
+    <string name="empty">空</string>
+    <string name="downloadBtn">下载选中的资源</string>
+    <string name="chat_btn">聊天</string>
+    <string name="edit_btn">编　　辑</string>
+
+    <!-- Login & Regester -->
+    <string name="login_userText">用户名:</string>
+    <string name="login_userText_hint">请输入用户名</string>
+    <string name="login_right_image">＞</string>
+    <string name="login_passwdText">密　码:</string>
+    <string name="login_findPassword">找回密码</string>
+    <string name="login_checbox_text1">记住密码</string>
+    <string name="login_checbox_text2">自动登录</string>
+    <string name="regester_passwdText2">重复密码:</string>
+    <string name="regester_email">邮　箱:</string>
+
+    <!-- user_information -->
+    <string name="personal_info">个人资料</string>
+    <string name="my_info">我的资料</string>
+    <string name="my_fav_list">我的收藏列表</string>
+    <string name="intro">简介</string>
+    <string name="email">E-mail</string>
+    <string name="login_user">登录名</string>
+    <string name="university">学校</string>
+    <string name="resourse_personality">个人资源</string>
+    <string name="related_resourse">与Ta相关的</string>
+    <string name="video_resourse">音频 资源</string>
+    <string name="audio_resourse">视频 资源</string>
+    <string name="doc_resourse">文档 资源</string>
+    <string name="topic_resourse">Ta发起的话题</string>
+    <string name="related_with_me">与我相关的</string>
+    <string name="chat_with_me">想和我聊的</string>
+    <string name="focused_mine">我所关注的</string>
+    <string name="dai_ding">待定</string>
+    <!-- TabAudioActivity -->
+    <string name="title_audio_category_cet4">CET4</string>
+    <string name="title_audio_category_cet6">CET6</string>
+    <string name="title_audio_category_ielts">IELTS</string>
+    <string name="title_audio_category_toefl">TOEFL</string>
+    <string name="title_audio_category_more">本地</string>
+
+    <!-- TabVideoActivity -->
+    <string name="title_video_category_edu">教育</string>
+    <string name="title_video_category_daily">生活</string>
+    <string name="title_video_category_economics">财经</string>
+    <string name="title_video_category_science">科技</string>
+    <string name="title_video_category_more">本地</string>
+
+    <!-- TabAssignmentsActivity -->
+    <string name="title_assignments_category_abeyance">待办</string>
+    <string name="title_assignments_category_finished">完成</string>
+    <string name="title_assignments_category_discuss">讨论</string>
+
+    <!-- TabExerciseActivity -->
+    <string name="title_exercise_category_reading">阅读</string>
+    <string name="title_exercise_category_grammar">语法</string>
+    <string name="title_exercise_category_vocabulary">词汇</string>
+    <string name="title_exercise_category_more">其他</string>
+    <string name="title_exercise_category_notes">单词本</string>
+    <string name="news_top_left_text">听力</string>
+    <string name="topic_top_left_text">视频</string>
+    <string name="picture_top_left_text">题库</string>
+    <string name="follow_top_left_text">作业</string>
+    <string name="vote_top_left_text">设置</string>
+
+    <!-- 题库 -->
+    <string name="free_learning">自    由</string>
+    <string name="basic_learning">基    础</string>
+    <string name="middle_learning">中    等</string>
+    <string name="difficult_learning">困    难</string>
+    <string name="basic_learn">基础学习</string>
+    <string name="all_checked">全    选</string>
+    <string name="start_learning">开始学习</string>
+    <string name="chapter_tip">难度设置</string>
+    <string name="check_answer">查看解释</string>
+    <string name="pre_question">上一题</string>
+    <string name="next_question">下一题</string>
+    <string name="current_number">序号：</string>
+    <string name="current_difficult">难度：</string>
+    <string name="check_question">查看题目</string>
+    <string name="answer">解释</string>
+    <string name="question">题目</string>
+    <string name="date">日期</string>
+    <string name="current_lesson">课程：</string>
+    <string name="list">列表</string>
+    <string name="note">笔记</string>
+    <string name="review">点评</string>
+    <string name="comment">评论</string>
+    <string name="save">保存</string>
+    <string name="building">建设中，敬请期待…</string>
+
+
+    <string name="back">返回</string>
+    <string name="download_all">全部下载</string>
+    <string name="download_complete">完成下载</string>
+    <string name="download_queue">正在下载</string>
+    <string name="downloaded">下载完成</string>
+    <string name="download_failed">下载失败</string>
+    <string name="check">check</string>
+    <string name="downloading">下载中</string>
+    <string name="edit">编辑</string>
+    <string name="edit_cancel">取消编辑</string>
+    <string name="background">背景</string>
+
+
+</resources>

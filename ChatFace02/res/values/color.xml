@@ -1,0 +1,17 @@
+<resources>
+   
+    <color name="imgbubg">#15d9d6c3</color>
+    <color name="white">#ffffff</color>
+    <color name="listviewbg">#000000</color>
+    <color name="listdivider">#A4D3EE</color>
+    <color name="numbercolor">#00CDCD</color>
+    <color name="dailbg">#1E1E1E</color>
+    <color name="talkbg">#1E1E1E</color>
+    <color name="dailnumberbg">#212121</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="showButtonbg">#CCCCCC</color>
+    <color name="voicetalkbg">#111111</color>
+    <color name="mainbg">#1E1E1E</color>
+    <color name="bigheadbg">#ADADAD</color>
+    <color name="fullscreenbottombg">#55006400</color>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/Play"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="播放音乐" />
+
+    <Button
+        android:id="@+id/Pause"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="暂停音乐" />
+
+    <Button
+        android:id="@+id/Stop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="停止音乐" />
+
+    <Button
+        android:id="@+id/Add"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="增大音量" />
+
+    <Button
+        android:id="@+id/Down"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="降低音量" />
+
+</LinearLayout>
