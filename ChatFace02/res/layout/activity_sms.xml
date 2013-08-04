@@ -184,7 +184,7 @@
             android:textSize="25sp" />
 
         <Button
-            android:id="@+id/contactorsButton_contactors"
+            android:id="@+id/contactorList_smsList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dip"
@@ -194,7 +194,7 @@
             android:textSize="25sp" />
 
         <Button
-            android:id="@+id/msgButton_contactors"
+            android:id="@+id/receive_msg_smsList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dip"

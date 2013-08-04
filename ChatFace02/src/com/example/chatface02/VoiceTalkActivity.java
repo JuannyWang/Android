@@ -24,6 +24,7 @@ import android.os.IBinder;
 import android.os.Message;
 import android.os.Messenger;
 import android.os.RemoteException;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -33,9 +34,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.example.data.Common;
-import com.example.data.LocalDataFactory;
 import com.example.servers.ChatService;
-import com.example.utils.ChatUtils;
 
 public class VoiceTalkActivity extends Activity implements OnClickListener {
 
@@ -57,12 +56,16 @@ public class VoiceTalkActivity extends Activity implements OnClickListener {
 	private String ID, IP_from;
 	private int common_code;
 
+	ServerSocket server;
+	Socket socket;
+	DataInputStream in;
+	DataOutputStream out;
+
 	private AudioTrack audioTrack;
 
 	private AsyncTask<Void, Integer, Void> recordTask, playTask, sendTask,
-			receiveTask;
+			receiveTask, myConnectionTask;
 
-	private TextView tv_real, tv_gzip, tv_zip, tv_bzip2;
 	public static final String tag = "VoiceCommuncationActivity";
 
 	@Override
@@ -74,7 +77,6 @@ public class VoiceTalkActivity extends Activity implements OnClickListener {
 		bindService(new Intent(this, ChatService.class), serviceConnection,
 				BIND_AUTO_CREATE);
 		CommuncationStart();
-
 	}
 
 	public void CommuncationStart() {
@@ -83,46 +85,16 @@ public class VoiceTalkActivity extends Activity implements OnClickListener {
 		bundle = getIntent().getExtras();
 		common_code = bundle.getInt("Common");
 		IP_from = bundle.getString("IP");
-		ID = bundle.getString("ID");
-		if (common_code == 0) {
-//			mMessenger = new Messenger(mHandler);
-			LocalDataFactory dataFactory = LocalDataFactory.getInstance(this);
-			String myID = dataFactory.getAccount();
-			bundle = getIntent().getExtras();
-			ID = bundle.getString("CallNewPhone");
-			Bundle typeBundle = new Bundle();
-			typeBundle.putString("myID", myID);
-			typeBundle.putString("ID", ID);
-			Message send_voice = Message.obtain(null, Common.VOICE_COMMUNCATION);
-			send_voice.setData(typeBundle);
-			try {
-				rMessenger.send(send_voice);
-			} catch (RemoteException e) {
-				e.printStackTrace();
-			}
-			receiveTask = new MyReceiveTask();
-			playTask = new MyPlayTask();
-			playTask.execute();
-			receiveTask.execute();
-
-			sendTask = new MySendTask();
-
-		} else if (common_code == 10){
-//			mMessenger = new Messenger(mHandler);
-			recordTask = new MyRecordTask();
-			playTask = new MyPlayTask();
-			receiveTask = new MyReceiveTask();
-			sendTask = new MySendTask();
-			flag = true;
-			recordTask.execute();
-			playTask.execute();
-			receiveTask.execute();
-			sendTask.execute();
-			contatcorName_voice.setText(ID);
-		}
-			ID = bundle.getString("CallNewPhone");
-
-
+		ID = bundle.getString("CallNewPhone");
+		Log.v("voiceTalkActivity", ID);
+		recordTask = new MyRecordTask();
+		receiveTask = new MyReceiveTask();
+		playTask = new MyPlayTask();
+		sendTask = new MySendTask();
+		myConnectionTask = new MyBuildConnectionTask();
+		myConnectionTask.execute();
+		ID = bundle.getString("CallNewPhone");
+		contatcorName_voice.setText(ID);
 	}
 
 	private void initView() {
@@ -151,10 +123,21 @@ public class VoiceTalkActivity extends Activity implements OnClickListener {
 			break;
 		case R.id.hangupImageButton_voice:
 			flag = false;
+			break;
+		case R.id.contactorsButton_voice:
+			Intent contactorIntent = new Intent();
+			contactorIntent.setClass(this, ContactorsListActivity.class);
+			startActivity(contactorIntent);
+			this.finish();
+			break;
+		case R.id.msgButton_voice:
+			Intent receiveIntent = new Intent();
+			receiveIntent.setClass(this, SMSListActivity.class);
+			startActivity(receiveIntent);
+			this.finish();
+			break;
 		}
 	}
-
-
 
 	/**
 	 * 自己的消息对象
@@ -199,8 +182,58 @@ public class VoiceTalkActivity extends Activity implements OnClickListener {
 		super.onDestroy();
 	}
 
+	private class MyBuildConnectionTask extends AsyncTask<Void, Integer, Void> {
+
+		@Override
+		protected Void doInBackground(Void... params) {
+			if (common_code == 0) {
+				try {
+					Log.v(tag, "开启server:" + port);
+					server = new ServerSocket(port);
+					Log.v(tag, "开启server成功");
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				try {
+					Log.v(tag, "开始等待客户端连接");
+					socket = server.accept();
+					out = new DataOutputStream(socket.getOutputStream());
+					in = new DataInputStream(socket.getInputStream());
+					Log.v(tag, "建立连接成功");
+					flag = true;
+					recordTask.execute();
+					sendTask.execute();
+					receiveTask.execute();
+					playTask.execute();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			} else {
+				try {
+					Log.v(tag, "开始尝试建立建立" + IP_from + ":" + port);
+					socket = new Socket(IP_from, port);
+					out = new DataOutputStream(socket.getOutputStream());
+					in = new DataInputStream(socket.getInputStream());
+					Log.v(tag, "建立连接成功");
+					flag = true;
+					recordTask.execute();
+					sendTask.execute();
+					receiveTask.execute();
+					playTask.execute();
+				} catch (UnknownHostException e) {
+					e.printStackTrace();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			return null;
+		}
+
+	}
+
 	private class MyRecordTask extends AsyncTask<Void, Integer, Void> {
 
+		@SuppressWarnings("deprecation")
 		@Override
 		protected Void doInBackground(Void... params) {
 			minbuffersize = AudioRecord.getMinBufferSize(8000,
@@ -210,13 +243,11 @@ public class VoiceTalkActivity extends Activity implements OnClickListener {
 					AudioFormat.CHANNEL_CONFIGURATION_MONO,
 					AudioFormat.ENCODING_PCM_16BIT, minbuffersize);
 			audioRecord.startRecording();
-
 			while (flag) {
 				byte[] audioData = new byte[minbuffersize];
 				audioRecord.read(audioData, 0, minbuffersize);
 				recordDataList.add(audioData);
 			}
-
 			audioRecord.stop();
 			return null;
 		}
@@ -226,27 +257,7 @@ public class VoiceTalkActivity extends Activity implements OnClickListener {
 
 		@Override
 		protected Void doInBackground(Void... params) {
-
-			ServerSocket server;
-			Socket socket;
-			DataInputStream in;
-
-			try {
-				server = new ServerSocket(port);
-				
-				socket = server.accept();
-				IP_from = socket.getInetAddress().toString();
-				in = new DataInputStream(socket.getInputStream());
-			} catch (UnknownHostException e) {
-				e.printStackTrace();
-				return null;
-			} catch (IOException e) {
-				e.printStackTrace();
-				return null;
-			}
-
 			while (flag) {
-
 				try {
 					int len = in.readInt();
 					byte[] tmp = new byte[len];
@@ -257,9 +268,7 @@ public class VoiceTalkActivity extends Activity implements OnClickListener {
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
-
 			}
-
 			try {
 				in.close();
 				socket.close();
@@ -267,7 +276,6 @@ public class VoiceTalkActivity extends Activity implements OnClickListener {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-
 			return null;
 		}
 
@@ -277,34 +285,9 @@ public class VoiceTalkActivity extends Activity implements OnClickListener {
 
 		@Override
 		protected Void doInBackground(Void... params) {
-
-			Socket socket;
-			DataOutputStream out;
-
-			try {
-				socket = new Socket(IP_from, port);
-				out = new DataOutputStream(socket.getOutputStream());
-			} catch (UnknownHostException e) {
-				e.printStackTrace();
-				return null;
-			} catch (IOException e) {
-				e.printStackTrace();
-				return null;
-			}
-
 			while (flag) {
 				if (recordDataList.size() > 1) {
 					byte[] tmp = recordDataList.removeFirst();
-
-					Message msg1 = Message.obtain(null, 0);
-					Bundle b1 = new Bundle();
-					b1.putInt("data", tmp.length);
-					msg1.setData(b1);
-					try {
-						mMessenger.send(msg1);
-					} catch (RemoteException e1) {
-						e1.printStackTrace();
-					}
 					try {
 						out.writeInt(tmp.length);
 						out.write(tmp);
@@ -313,16 +296,13 @@ public class VoiceTalkActivity extends Activity implements OnClickListener {
 						e.printStackTrace();
 					}
 				}
-
 			}
-
 			try {
 				out.close();
 				socket.close();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-
 			return null;
 		}
 
@@ -330,6 +310,7 @@ public class VoiceTalkActivity extends Activity implements OnClickListener {
 
 	private class MyPlayTask extends AsyncTask<Void, Integer, Void> {
 
+		@SuppressWarnings("deprecation")
 		@Override
 		protected Void doInBackground(Void... params) {
 			minbuffersize = AudioTrack.getMinBufferSize(8000,
@@ -340,7 +321,6 @@ public class VoiceTalkActivity extends Activity implements OnClickListener {
 					AudioFormat.ENCODING_PCM_16BIT, minbuffersize,
 					AudioTrack.MODE_STREAM);
 			audioTrack.play();
-
 			while (flag) {
 				if (receiveDataList.size() > 1) {
 					byte[] tmp = receiveDataList.removeFirst();
@@ -348,7 +328,6 @@ public class VoiceTalkActivity extends Activity implements OnClickListener {
 				}
 
 			}
-
 			audioTrack.stop();
 			return null;
 		}

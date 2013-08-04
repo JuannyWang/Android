@@ -20,6 +20,7 @@ import android.widget.EditText;
 
 import com.example.bean.PackageType;
 import com.example.chatface02.ContactorsListActivity;
+import com.example.chatface02.MainActivity;
 import com.example.chatface02.R;
 import com.example.data.Common;
 import com.example.data.LocalDataFactory;
@@ -173,7 +174,7 @@ public class LoginActivity extends Activity implements OnClickListener {
 	}
 	
 	private void gotoFriendListActivity() {
-		Intent intent = new Intent(this,ContactorsListActivity.class);
+		Intent intent = new Intent(this,MainActivity.class);
 		startActivity(intent);
 		finish();
 	}

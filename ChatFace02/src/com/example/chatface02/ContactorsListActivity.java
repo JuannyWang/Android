@@ -156,6 +156,16 @@ public class ContactorsListActivity extends Activity {
 			intent.setClass(this, PersonDetail.class);
 			startActivity(intent);
 			break;
+		case R.id.contactorsButton_contactors:
+			Intent contactorIntent = new Intent();
+			contactorIntent.setClass(this, ContactorsListActivity.class);
+			startActivity(contactorIntent);
+			break;
+		case R.id.msgButton_contactors:
+			Intent receiveIntent = new Intent();
+			receiveIntent.setClass(this, SMSListActivity.class);
+			startActivity(receiveIntent);
+			break;
 		}
 	}
 }

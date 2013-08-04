@@ -134,6 +134,14 @@ public class SendToMsgActivity extends Activity {
 				e.printStackTrace();
 			}
 			break;
+		case R.id.back_msg_btn:
+			Intent intent = new Intent();
+			intent.setClass(this, ContactorsListActivity.class);
+			startActivity(intent);
+			this.finish();
+			break;
+		case R.id.add_sendPerson_btn:
+			break;
 		}
 	}
 

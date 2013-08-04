@@ -291,6 +291,21 @@ public class SMSListActivity extends Activity implements OnClickListener {
 				e.printStackTrace();
 			}
 			break;
+		case R.id.contactorList_smsList:
+			Intent contactorIntent = new Intent();
+			contactorIntent.setClass(this, ContactorsListActivity.class);
+			startActivity(contactorIntent);
+			this.finish();
+
+			break;
+		case R.id.receive_msg_smsList:
+			Intent receiveIntent = new Intent();
+			receiveIntent.setClass(this, SMSListActivity.class);
+			startActivity(receiveIntent);
+			this.finish();
+
+			break;
+			
 		}
 	}
 

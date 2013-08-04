@@ -14,7 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
-            android:onClick="DetailCallOnclick"
+            android:onClick="MsgSendOnclick"
             android:text="Back" />
 
         <Button
@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
-            android:onClick="DetailCallOnclick"
+            android:onClick="MsgSendOnclick"
             android:text="添加收件人" />
     </RelativeLayout>
 

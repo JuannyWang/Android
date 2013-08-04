@@ -78,7 +78,7 @@ public class ChatService extends Service {
 				funcVoice(msg.getData());
 				break;
 			case Common.VIDEO_COMMUNCATION:
-				Log.v(tag, "接收到发送视频指令");
+				Log.v(tag, "接收到发起视频指令");
 				funcVideo(msg.getData());
 				break;
 			case Common.REGIST:
@@ -270,7 +270,7 @@ public class ChatService extends Service {
 	}
 
 	/**
-	 * 接收到语音会话请求
+	 * 接收到视频会话请求
 	 * 
 	 * @param obj
 	 */
@@ -283,6 +283,9 @@ public class ChatService extends Service {
 		Bundle video_reciverBundle = new Bundle();
 		video_reciverBundle.putString("ID", obj.getFromUser());
 		video_reciverBundle.putString("IP", videoIP);
+		video_reciverBundle.putInt("Common", Common.VIDEO_COMMUNCATION);
+		intents.putExtras(video_reciverBundle);
+		startActivity(intents);
 		video_msg.setData(video_reciverBundle);
 		startActivity(intents);
 		try {
@@ -294,7 +297,7 @@ public class ChatService extends Service {
 	}
 
 	/**
-	 * 接收到视频会话请求
+	 * 接收到语音会话请求
 	 * 
 	 * @param obj
 	 */
@@ -308,14 +311,10 @@ public class ChatService extends Service {
 		Bundle voice_reciverBundle = new Bundle();
 		voice_reciverBundle.putString("ID", obj.getFromUser());
 		voice_reciverBundle.putString("IP", reciverIP);
+		voice_reciverBundle.putInt("Common", Common.VOICE_COMMUNCATION);
 		voice_msg.setData(voice_reciverBundle);
+		intent.putExtras(voice_reciverBundle);
 		startActivity(intent);
-		try {
-			rMessenger.send(voice_msg);
-
-		} catch (RemoteException e) {
-			e.printStackTrace();
-		}
 	}
 
 	/**
@@ -334,15 +333,15 @@ public class ChatService extends Service {
 			funcBackMessage(obj);
 			break;
 		case PackageType.VIDEO_COMMUNCATION:
-			Log.v(tag, "接收到音频IP转发回馈消息");
+			Log.v(tag, "接收到视频IP转发回馈消息");
 			funcBackVoice(obj);
 			break;
 		case PackageType.VOICE_COMMUNCATION:
-			Log.v(tag, "接收到视频IP转发回馈消息");
+			Log.v(tag, "接收到音频IP转发回馈消息");
 			funcBackVideo(obj);
 			break;
 		default:
-			Log.v(tag, "接收到未定义服务器回馈消息");
+			Log.v(tag, "接收到未定义服务器回馈消息"+obj.getType());
 			break;
 		}
 	}

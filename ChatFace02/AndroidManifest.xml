@@ -73,6 +73,9 @@
         <activity
             android:name="com.example.chatface02.SendToMsgActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+            <activity
+            android:name="com.example.chatface02.MainActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
         <service
             android:name="com.example.servers.ChatService"
             android:process=":remote" >

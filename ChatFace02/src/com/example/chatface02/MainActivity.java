@@ -87,7 +87,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			break;
 		case R.id.otherfunButton_main:
 			Intent otherIntent = new Intent();
-			otherIntent.setClass(MainActivity.this, VideoTalkInviteActivity.class);
+			otherIntent.setClass(MainActivity.this, SMSListActivity.class);
 			startActivity(otherIntent);
 			break;
 		}

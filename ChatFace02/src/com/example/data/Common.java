@@ -24,9 +24,9 @@ abstract public class Common {
 	
 	public static final int MESSAGE_TEST = 4;
 	
-	public static final int SERVER_PORT = 8866;
+	public static final int SERVER_PORT = 6688;
 	
-	public static final String SERVER_IP = "113.251.222.85";
+	public static final String SERVER_IP = "113.251.223.224";
 
 	public static final int CON = 5;
 	

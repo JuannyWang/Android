@@ -12,6 +12,7 @@ import com.example.utils.ChatUtils;
 
 import android.app.Activity;
 import android.content.ComponentName;
+import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.Handler;
@@ -129,6 +130,10 @@ public class ChatMsgsActivity extends Activity {
 	public void ReplyMsgOnclick(View view) {
 		switch (view.getId()) {
 		case R.id.back_msg_btn:
+			Intent receiveIntent = new Intent();
+			receiveIntent.setClass(this, ContactorsListActivity.class);
+			startActivity(receiveIntent);
+			this.finish();
 			break;
 		case R.id.reply_msg_btn:
 			LocalDataFactory dataFactory = LocalDataFactory.getInstance(this);
