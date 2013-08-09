@@ -9,6 +9,9 @@ import java.util.List;
 import com.ghost.justdraw.bean.LineData;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Bitmap.Config;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.util.AttributeSet;
@@ -98,6 +101,31 @@ public class DrawView extends View {
 	}
 
 	/**
+	 * 重置所有
+	 */
+	public void reset() {
+		backColor = Color.WHITE;
+		size = 5;
+		color = Color.BLACK;
+		workLine = new LineData(size, color);
+		lines = new LinkedList<LineData>();
+		invalidate();
+	}
+
+	/**
+	 * 获得当前绘制的图片
+	 * 
+	 * @return
+	 */
+	public Bitmap getBitmapData() {
+		Bitmap bitmap = Bitmap.createBitmap(this.getWidth(), this.getHeight(),
+				Config.ARGB_8888);
+		Canvas tempCanvas = new Canvas(bitmap);
+		this.draw(tempCanvas);
+		return bitmap;
+	}
+
+	/**
 	 * 移除掉最后一条线(该方法会自动重绘)
 	 */
 	public void removeLast() {
@@ -152,6 +180,16 @@ public class DrawView extends View {
 	 */
 	public void setSize(int size) {
 		this.size = size;
+		workLine = new LineData(size, color);
+	}
+
+	/**
+	 * 返回画笔粗细
+	 * 
+	 * @return
+	 */
+	public int getSize() {
+		return this.size;
 	}
 
 	/**

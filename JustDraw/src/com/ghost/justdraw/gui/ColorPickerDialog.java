@@ -25,7 +25,7 @@ import android.view.WindowManager;
  * @date 2013-8-8
  */
 public class ColorPickerDialog extends Dialog {
-	private final boolean debug = true;
+	private final boolean debug = false;
 	private final String TAG = "ColorPicker";
 
 	Context context;
