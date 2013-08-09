@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+	通过不透明度的变化来实现所有匹配元素的淡入效果
+	Alpha从0变为1
+	持续时间300毫秒
+	动画从开始到结束，变化率是线性变化
+ -->
+<alpha xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="300"
+    android:fromAlpha="0.0"
+    android:interpolator="@android:anim/accelerate_interpolator"
+    android:toAlpha="1.0" />

@@ -7,7 +7,23 @@
 package jerry.weixin.activity;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
 
 public class RegisterActivity extends Activity {
 
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		this.setContentView(R.layout.register);
+	}
+	
+	// 标题栏 返回按钮
+	public void back(View v) {
+		Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+		startActivity(intent);
+		this.finish();
+	}
+	
 }

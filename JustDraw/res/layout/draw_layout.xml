@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0B1746" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="手绘软件"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </LinearLayout>
+    
+    <com.ghost.justdraw.gui.DrawView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:layout_weight="1" >
+	        <ImageButton
+	            android:id="@+id/btn_clear"
+	            android:layout_width="wrap_content"
+	            android:layout_height="58dp"
+	            android:background="#0B1746"
+	            android:onClick="doReset"
+	            android:src="@drawable/globe_png_005" />
+	        <TextView 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:text="清空"
+	            android:gravity="center"
+	            android:textColor="#F8F8FF"
+	            android:textAppearance="?android:attr/textAppearanceSmall"/>
+        </LinearLayout>
+        
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:layout_weight="1" >
+
+	        <ImageButton
+	            android:id="@+id/btn_backColor"
+	            android:layout_width="wrap_content"
+	            android:layout_height="58dp"
+	            android:background="#0B1746"
+	            android:onClick="setBackColor"
+	            android:src="@drawable/globe_png_013" />
+
+	        <TextView 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:text="背景"
+	            android:gravity="center"
+	            android:textColor="#F8F8FF"
+	            android:textAppearance="?android:attr/textAppearanceSmall"/>
+        </LinearLayout>
+        
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:layout_weight="1" >
+
+	        <ImageButton
+	            android:id="@+id/btn_size"
+	            android:layout_width="wrap_content"
+	            android:layout_height="58dp"
+	            android:background="#0B1746"
+	            android:src="@drawable/globe_png_026" />
+
+	        <TextView 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:text="粗细"
+	            android:gravity="center"
+	            android:textColor="#F8F8FF"
+	            android:textAppearance="?android:attr/textAppearanceSmall"/>
+        </LinearLayout>
+        
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:layout_weight="1" >
+
+	        <ImageButton
+	            android:id="@+id/btn_color"
+	            android:layout_width="wrap_content"
+	            android:layout_height="58dp"
+	            android:background="#0B1746"
+	            android:onClick="setLineColor"
+	            android:src="@drawable/globe_png_030" />
+
+	        <TextView 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:text="颜色"
+	            android:gravity="center"
+	            android:textColor="#F8F8FF"
+	            android:textAppearance="?android:attr/textAppearanceSmall"/>
+        </LinearLayout>
+        
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:layout_weight="1" >
+
+	        <ImageButton
+	            android:id="@+id/btn_goBack"
+	            android:layout_width="wrap_content"
+	            android:layout_height="58dp"
+	            android:onClick="doBack"
+	            android:background="#0B1746"
+	            android:src="@drawable/globe_png_007" />
+
+	        <TextView 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:text="撤销"
+	            android:gravity="center"
+	            android:textColor="#F8F8FF"
+	            android:textAppearance="?android:attr/textAppearanceSmall"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    
+
+</LinearLayout>

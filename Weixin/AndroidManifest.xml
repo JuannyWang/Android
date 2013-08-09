@@ -22,11 +22,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivety"
+            android:name=".MainActivity"
             android:theme="@style/ActivityStyle" >
         </activity>
         <activity 
             android:name=".LoginActivity"
+            android:theme="@style/ActivityStyle">
+        </activity>
+        <activity 
+            android:name=".RegisterActivity"
             android:theme="@style/ActivityStyle">
         </activity>
     </application>

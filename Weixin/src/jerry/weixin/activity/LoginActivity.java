@@ -39,12 +39,15 @@ public class LoginActivity extends Activity {
 			Toast.makeText(getApplicationContext(), "登入成功", Toast.LENGTH_SHORT)
 					.show();
 			// 暂时跳到上级页面
-			startActivity(new Intent(LoginActivity.this, MainActivety.class));
+			startActivity(new Intent(LoginActivity.this, MainActivity.class));
+			this.finish();
 		}
 	}
 
 	// 标题栏 返回按钮
 	public void back(View v) {
+		Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+		startActivity(intent);
 		this.finish();
 	}
 

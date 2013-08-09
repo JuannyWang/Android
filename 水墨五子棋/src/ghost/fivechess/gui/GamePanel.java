@@ -20,6 +20,7 @@ import android.view.SurfaceHolder.Callback;
 
 /**
  * 游戏渲染类
+ * 
  * @author 玄雨
  * @qq 821580467
  * @date 2013-1-19
@@ -57,16 +58,20 @@ public class GamePanel extends SurfaceView implements Callback, Common {
 	public void surfaceChanged(SurfaceHolder holder, int format, int width,
 			int height) {
 		Canvas canvas = sfh.lockCanvas();
-		GameData.scaleWidth = (float) canvas.getWidth() / (float) GameData.width;
-		GameData.scaleHeight = (float) canvas.getHeight() / (float) GameData.height;
+		GameData.scaleWidth = (float) canvas.getWidth()
+				/ (float) GameData.width;
+		GameData.scaleHeight = (float) canvas.getHeight()
+				/ (float) GameData.height;
 		sfh.unlockCanvasAndPost(canvas);
 
 	}
 
 	public void surfaceCreated(SurfaceHolder holder) {
 		Canvas canvas = sfh.lockCanvas();
-		GameData.scaleWidth = (float) canvas.getWidth() / (float) GameData.width;
-		GameData.scaleHeight = (float) canvas.getHeight() / (float) GameData.height;
+		GameData.scaleWidth = (float) canvas.getWidth()
+				/ (float) GameData.width;
+		GameData.scaleHeight = (float) canvas.getHeight()
+				/ (float) GameData.height;
 		sfh.unlockCanvasAndPost(canvas);
 		update_thread = new Thread(new UpdateSurface());
 		inilization();
@@ -114,24 +119,23 @@ public class GamePanel extends SurfaceView implements Callback, Common {
 		ImageFactory.loadImageFromAssets("image/func/loss.png", "loss_text");
 		ImageFactory.loadImageFromAssets("image/func/chessboard.jpg",
 				"chessboard");
-		ImageFactory.loadImageFromAssets("image/func/white.png",
-				"white");
-		ImageFactory.loadImageFromAssets("image/func/black.png",
-				"black");
-		ImageFactory.loadImageFromAssets("image/func/choose.png",
-				"choose");
+		ImageFactory.loadImageFromAssets("image/func/white.png", "white");
+		ImageFactory.loadImageFromAssets("image/func/black.png", "black");
+		ImageFactory.loadImageFromAssets("image/func/choose.png", "choose");
 		GameData.flag = true;
 		GameData.debugModel = false;
-		GameData.fps = 8;
-		GameData.moveSpeedIn=14;
-		GameData.moveSpeedOut=20;
+		GameData.fps = 1000 / 60;
+		GameData.moveSpeedIn = 12;
+		GameData.moveSpeedOut = 20;
 		clickaviliable = true;
 	}
 
 	private void myDraw() {
 		Canvas canvas = sfh.lockCanvas();
-		GameData.canvas=canvas;
-		GameData.paint=paint;
+		GameData.canvas = canvas;
+		GameData.paint = paint;
+		if (canvas == null)
+			return;
 		canvas.drawColor(Color.BLACK);
 		game = PanelFactory.getInstance(GameData.status);
 		game.drawSelf();
@@ -187,7 +191,7 @@ public class GamePanel extends SurfaceView implements Callback, Common {
 		}
 
 	}
-	
+
 	public void backPress() {
 		if (clickaviliable) {
 			game = PanelFactory.getInstance(GameData.status);

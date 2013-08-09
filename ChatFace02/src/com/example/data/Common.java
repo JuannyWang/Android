@@ -26,7 +26,7 @@ abstract public class Common {
 	
 	public static final int SERVER_PORT = 6688;
 	
-	public static final String SERVER_IP = "113.251.223.224";
+	public static final String SERVER_IP = "192.168.23.1";
 
 	public static final int CON = 5;
 	

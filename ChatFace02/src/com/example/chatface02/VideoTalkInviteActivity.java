@@ -150,6 +150,7 @@ public class VideoTalkInviteActivity extends Activity {
 			}
 			intent.putExtras(typeBundle);
 			startActivity(intent);
+			this.finish();
 			break;
 		case R.id.noInvite:
 			Intent receiveIntent = new Intent();

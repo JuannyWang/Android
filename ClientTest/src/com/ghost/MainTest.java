@@ -22,13 +22,23 @@ public class MainTest {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		System.out.println(MD5("12121212"));
 		try {
 			ServerConnection connection = ServerConnection.getInstance();
-			connection.sendPackageBean(new PackageBean(PackageType.REGIST,
-					"111111111111", "000000000000",
-					MD5("12121212")));
+			connection.sendPackageBean(new PackageBean(0,
+					"123123123123", "000000000000",
+					MD5("123")));
 			PackageBean bean = connection.readPackageBean();
+			System.out.println(bean);
+			if(Integer.parseInt((String)bean.getData())==6) {
+				connection.sendPackageBean(new PackageBean(0,
+						"123123123123", "000000000000",
+						MD5("123")));
+				bean = connection.readPackageBean();
+				System.out.println(bean);
+			}
+			connection.sendPackageBean(new PackageBean(7,
+					"123123123123", "123123123123",""));
+			bean = connection.readPackageBean();
 			System.out.println(bean);
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
